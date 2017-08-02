@@ -2,7 +2,12 @@
   <head>
   	<meta http-equiv="Content-Security-Policy" content="default-src 'self' sinnaps.com">
   	<script type="text/javascript">
-  		window.setTimeout(function(){ window.location = "https://www.sinnaps.com/cloud/login/auth"; },500);
+  		var loc = window.location.href+'';
+		if (loc.indexOf('http://')==0){
+			window.location.href = loc.replace('http://','https://');
+		}else{
+			window.location = "https://www.sinnaps.com/cloud/login/auth";
+		}
   	</script>
   </head>
   <body style="overflow:hidden;background-image:url('splash.png');background-position: center center;background-repeat: no-repeat;background-size:100% auto;">
