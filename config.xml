@@ -55,7 +55,6 @@
 	<plugin name="cordova-plugin-whitelist"/>
 	<access origin="https://sinnaps.com" subdomains="true" />
 	<access origin="*" subdomains="true" />
-	<access origin="*" />
 	<allow-intent href="*"/>
 	<allow-navigation href="*"/>
 	
