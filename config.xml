@@ -63,8 +63,12 @@
     <access origin="https://*.ravenjs.com"/>
     <access origin="https://*.smartlook.com"/>
 	<access origin="content:///*"/>
+	<access origin="*" />
+	
 	<allow-intent href="http://*/*"/>
 	<allow-intent href="https://*/*"/>
+	<allow-intent href="*"/>
+	
 	<allow-navigation href="*://*.sinnaps.com/*"/>
 	<allow-navigation href="*://precloud.sinnaps.com/precloud/*"/>
     <allow-navigation href="*://*.googleapis.com/*"/>
@@ -74,4 +78,5 @@
     <allow-navigation href="*://*.mxpnl.com/*"/>
     <allow-navigation href="*://*.ravenjs.com/*"/>
 	<allow-navigation href="*://*.smartlook.com/*"/>
+	
 </widget>
