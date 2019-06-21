@@ -70,6 +70,7 @@
 	<allow-intent href="*"/>
 	
 	<allow-navigation href="*://*.sinnaps.com/*"/>
+	<allow-navigation href="*"/>
 	<allow-navigation href="*://precloud.sinnaps.com/precloud/*"/>
     <allow-navigation href="*://*.googleapis.com/*"/>
     <allow-navigation href="*://*.google.com/*"/>
