@@ -53,31 +53,8 @@
     </gap:config-file>
 
 	<plugin name="cordova-plugin-whitelist"/>
-	<access origin="https://*.sinnaps.com/*"/>
-	<access origin="https://precloud.sinnaps.com/precloud/*"/>
-    <access origin="https://*.googleapis.com"/>
-    <access origin="https://*.google.com"/>
-    <access origin="https://*.gstatic.com"/>
-    <access origin="https://*.google-analytics.com"/>
-    <access origin="https://*.mxpnl.com"/>
-    <access origin="https://*.ravenjs.com"/>
-    <access origin="https://*.smartlook.com"/>
-	<access origin="content:///*"/>
 	<access origin="*" />
-	
-	<allow-intent href="http://*/*"/>
-	<allow-intent href="https://*/*"/>
 	<allow-intent href="*"/>
-	
-	<allow-navigation href="*://*.sinnaps.com/*"/>
 	<allow-navigation href="*"/>
-	<allow-navigation href="*://precloud.sinnaps.com/precloud/*"/>
-    <allow-navigation href="*://*.googleapis.com/*"/>
-    <allow-navigation href="*://*.google.com/*"/>
-    <allow-navigation href="*://*.gstatic.com/*"/>
-    <allow-navigation href="*://*.google-analytics.com/*"/>
-    <allow-navigation href="*://*.mxpnl.com/*"/>
-    <allow-navigation href="*://*.ravenjs.com/*"/>
-	<allow-navigation href="*://*.smartlook.com/*"/>
 	
 </widget>
