@@ -53,6 +53,7 @@
     </gap:config-file>
 
 	<plugin name="cordova-plugin-whitelist"/>
+	<access origin="https://www.sinnaps.com" subdomains="true" />
 	<access origin="*" />
 	<allow-intent href="*"/>
 	<allow-navigation href="*"/>
