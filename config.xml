@@ -55,6 +55,10 @@ Sinnaps
 </plugin>
 <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
   
+<platform name="android">
+  <resource-file src="google-services.json" target="google-services.json" />
+</platform>
+  
   
 <plugin name="cordova-plugin-whitelist"/>
 <access origin="https://sinnaps.com" subdomains="true" />
