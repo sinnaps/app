@@ -7,7 +7,19 @@
     -->
   	<script src="jquery.js"></script>
   	<script type="text/javascript">
-      alert("ajax");
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";
+  		    $(location).attr('href','https://precloud.sinnaps.com/precloud/mobile/');
+        }else{
+          window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
+  		    $(location).attr('href','https://precloud.sinnaps.com/precloud/login/auth');
+        }
+      };
+      xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
+      xhttp.send(); 
+      
       $.ajax({
         url:"https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001"
       }).error(function(){
