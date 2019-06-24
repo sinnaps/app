@@ -17,6 +17,8 @@ Sinnaps
 <feature name="Notification">
 <param name="android-package" value="org.apache.cordova.Notification" />
 </feature>
+  
+<uses-permission android:name="android.permission.VIBRATE" />
 
 <!--<preference name="permissions" value="none"/>-->
 <preference name="orientation" value="portrait" />
