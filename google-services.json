@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "58889346741",
+    "firebase_url": "https://pre-sinnaps.firebaseio.com",
+    "project_id": "pre-sinnaps",
+    "storage_bucket": "pre-sinnaps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58889346741:android:cac802e626cedf66",
+        "android_client_info": {
+          "package_name": "com.sinnaps.cloud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58889346741-t68e09va3kjnbckbucobuerudb42u7r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEiT56zdrGjiyiJCWaNnquLxWK3NiIuZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58889346741-t68e09va3kjnbckbucobuerudb42u7r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
