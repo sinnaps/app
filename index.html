@@ -1,19 +1,21 @@
 <html>
   <head>
     <!--
-    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+      <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+      <meta http-equiv="refresh" content="0;URL='https://precloud.sinnaps.com/precloud/login/auth'" />
+      <meta https-equiv="refresh" content="0;URL='https://precloud.sinnaps.com/precloud/login/auth'" />
     -->
-  	<meta http-equiv="refresh" content="0;URL='https://precloud.sinnaps.com/precloud/login/auth'" />
-  	<meta https-equiv="refresh" content="0;URL='https://precloud.sinnaps.com/precloud/login/auth'" />
-
   	<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   	<script type="text/javascript">
-   
-      setTimeout(function(){
+      $.ajax({
+        url:"https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001"
+      }).error(function(){
         window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
-      },100);
-  		window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
-  		$(location).attr('href','https://precloud.sinnaps.com/precloud/login/auth');
+  		  $(location).attr('href','https://precloud.sinnaps.com/precloud/login/auth');
+      }).done(function(){
+        window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";
+  		  $(location).attr('href','https://precloud.sinnaps.com/precloud/mobile/');
+      });;
 
   	</script>
   </head>
