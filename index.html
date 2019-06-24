@@ -36,7 +36,8 @@
       });
 
       push.on('registration', (data) => {
-        alert("registration");
+        console.log("registration");
+        console.log(data);
       });
 
       push.on('notification', (data) => {
@@ -49,7 +50,8 @@
       });
 
       push.on('error', (e) => {
-        alert(e.message);
+        console.log("error");
+        console.log(e);
       });
   	</script>
   </head>
