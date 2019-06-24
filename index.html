@@ -58,6 +58,27 @@ var app = {
     }
 };
       
+      
+function init(){
+        try {
+          console.log("PushNotification");  
+          console.log(PushNotification);
+          var push = PushNotification.init({ "android": {"senderID": "58889346741"}});
+          push.on('registration', function(data) {
+              console.log("registrando!!!!!!");
+              console.log(data);
+          });
+          push.on('notification', function(data) {
+              console.log(data.title+" Message: " +data.message);
+          });
+          push.on('error', function(e) {
+              console.log("Error!!!!!");
+              console.log(e.message);
+          });
+        }catch(err) {
+            alert("receivedEvent error : " + err);
+        }
+}      
       /*function init(){
         try{
           console.log("Ejecuto JS");
