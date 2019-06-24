@@ -12,14 +12,6 @@ Sinnaps
 </author>
   
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-dialogs" version="2.0.3-dev">
-  
-<platform name="android">
-  <config-file>
-    <feature name="Notification">
-      <param name="android-package" value="org.apache.cordova.dialogs.Notification"/>
-    </feature>
-  </config-file>
-</platform>
 
 <uses-permission android:name="android.permission.VIBRATE" />
 
