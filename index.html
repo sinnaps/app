@@ -21,41 +21,45 @@
       xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
       xhttp.send(); 
 */
-      const push = PushNotification.init({
-        android: {
-        },
-          browser: {
-              pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+      function init(){
+        console.log("Ejecuto JS");
+        const push = PushNotification.init({
+          android: {
           },
-        ios: {
-          alert: "true",
-          badge: "true",
-          sound: "true"
-        },
-        windows: {}
-      });
+            browser: {
+                pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+            },
+          ios: {
+            alert: "true",
+            badge: "true",
+            sound: "true"
+          },
+          windows: {}
+        });
+        console.log(push);
 
-      push.on('registration', (data) => {
-        console.log("registration");
-        console.log(data);
-      });
+        push.on('registration', (data) => {
+          console.log("registration");
+          console.log(data);
+        });
 
-      push.on('notification', (data) => {
-        // data.message,
-        // data.title,
-        // data.count,
-        // data.sound,
-        // data.image,
-        // data.additionalData
-      });
+        push.on('notification', (data) => {
+          // data.message,
+          // data.title,
+          // data.count,
+          // data.sound,
+          // data.image,
+          // data.additionalData
+        });
 
-      push.on('error', (e) => {
-        console.log("error");
-        console.log(e);
-      });
+        push.on('error', (e) => {
+          console.log("error");
+          console.log(e);
+        });
+      }
   	</script>
   </head>
   <body style="overflow:hidden;background-image:url('splash.png');background-position: center center;background-repeat: no-repeat;background-size:100% auto;">
-
+    <button onclick="init()">INIT</button>
   </body>
 </html>
