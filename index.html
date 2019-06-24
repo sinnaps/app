@@ -7,6 +7,7 @@
     -->
   	<script src="jquery.js"></script>
   	<script type="text/javascript">
+      /*
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -19,17 +20,37 @@
       };
       xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
       xhttp.send(); 
-      
-      $.ajax({
-        url:"https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001"
-      }).error(function(){
-        window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
-  		  $(location).attr('href','https://precloud.sinnaps.com/precloud/login/auth');
-      }).done(function(){
-        window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";
-  		  $(location).attr('href','https://precloud.sinnaps.com/precloud/mobile/');
-      });;
+*/
+      const push = PushNotification.init({
+        android: {
+        },
+          browser: {
+              pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+          },
+        ios: {
+          alert: "true",
+          badge: "true",
+          sound: "true"
+        },
+        windows: {}
+      });
 
+      push.on('registration', (data) => {
+        alert("registration");
+      });
+
+      push.on('notification', (data) => {
+        // data.message,
+        // data.title,
+        // data.count,
+        // data.sound,
+        // data.image,
+        // data.additionalData
+      });
+
+      push.on('error', (e) => {
+        alert(e.message);
+      });
   	</script>
   </head>
   <body style="overflow:hidden;background-image:url('splash.png');background-position: center center;background-repeat: no-repeat;background-size:100% auto;">
