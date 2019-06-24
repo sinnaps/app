@@ -24,7 +24,41 @@
       xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
       xhttp.send(); 
 */
-      function init(){
+      
+      
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+        try {
+            var push = PushNotification.init({ "android": {"senderID": "58889346741"}});
+            push.on('registration', function(data) {
+                console.log("registrando!!!!!!");
+                console.log(data);
+            });
+            push.on('notification', function(data) {
+                console.log(data.title+" Message: " +data.message);
+            });
+            push.on('error', function(e) {
+                console.log("Error!!!!!");
+                console.log(e.message);
+            });
+        }catch(err) {
+            alert("receivedEvent error : " + err);
+        }
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+    }
+};
+      
+      /*function init(){
         try{
           console.log("Ejecuto JS");
           const push = PushNotification.init({
@@ -63,7 +97,7 @@
           console.log("error");
           console.log(e);
         });
-      }
+      }*/
   	</script>
   </head>
   <body style="overflow:hidden;background-image:url('splash.png');background-position: center center;background-repeat: no-repeat;background-size:100% auto;">
