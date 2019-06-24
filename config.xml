@@ -10,10 +10,6 @@
 <author href="https://www.sinnaps.com" email="helpdesk@sinnaps.com">
 Sinnaps
 </author>
-  
-<plugin name="cordova-plugin-dialogs">
-
-<uses-permission android:name="android.permission.VIBRATE" />
 
 <!--<preference name="permissions" value="none"/>-->
 <preference name="orientation" value="portrait" />
