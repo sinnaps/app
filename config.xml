@@ -51,8 +51,7 @@ Sinnaps
 </gap:config-file>
 
 <plugin name="phonegap-plugin-push" spec="~2.2.0">
-  <variable name="SENDER_ID" value="58889346741" />
-  <variable name="FCM_VERSION" value="15.0.0" />
+
 </plugin>
 
 <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
