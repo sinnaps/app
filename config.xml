@@ -12,10 +12,10 @@ Sinnaps
 </author>
 
 <feature name="Notification">
-<param name="android-package" value="org.apache.cordova.notification" />
+<param name="android-package" value="org.apache.cordova.Notification" />
 </feature>
 
-<plugin name="notification" value="org.apache.cordova.notification"/>
+<plugin name="android-package" value="org.apache.cordova.Notification"/>
 
 <uses-permission android:name="android.permission.VIBRATE" />
 
