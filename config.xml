@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-xmlns:gap = "http://phonegap.com/ns/1.0"
-id        = "com.sinnaps.cloud"
-version   = "2.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.sinnaps.cloud" version="2.0.0">
 
 <name>Sinnaps | Project management</name>
 
@@ -64,9 +61,5 @@ Sinnaps
 <access origin="*" subdomains="true" />
 <allow-intent href="*"/>
 <allow-navigation href="*"/>
-
-<system.webServer>
-<httpRedirect enabled="true" destination="http://www.contoso.com/" />
-</system.webServer>
 
 </widget>
