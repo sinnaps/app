@@ -22,22 +22,26 @@
       xhttp.send(); 
 */
       function init(){
-        console.log("Ejecuto JS");
-        const push = PushNotification.init({
-          android: {
-          },
-            browser: {
-                pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+        try{
+          console.log("Ejecuto JS");
+          const push = PushNotification.init({
+            android: {
             },
-          ios: {
-            alert: "true",
-            badge: "true",
-            sound: "true"
-          },
-          windows: {}
-        });
-        console.log(push);
-
+              browser: {
+                  pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+              },
+            ios: {
+              alert: "true",
+              badge: "true",
+              sound: "true"
+            },
+            windows: {}
+          });
+          console.log(push);
+        } catch(Exception e){
+          console.log("Error");
+          console.log(e);          
+        }
         push.on('registration', (data) => {
           console.log("registration");
           console.log(data);
