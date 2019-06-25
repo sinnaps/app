@@ -30,14 +30,18 @@
     function onDeviceReady() {
         try {
             var push = PushNotification.init({ "android": {"senderID": "58889346741"}});
+            
             push.on('registration', function(data) {
                 console.log("registrando!!!!!!");
                 console.log(data.registrationId);
+                window.localStorage.setItem("deviceToken", data.registrationId);
                 alert("guay");
             });
-            push.on('notification', function(data) {
-                console.log(data.title+" Message: " +data.message);
+            
+            push.on('notification', function(data) {            
+              console.log(data.title+" Message: " +data.message);
             });
+            
             push.on('error', function(e) {
                 console.log("Error!!!!!");
                 console.log(e.message);
@@ -46,69 +50,11 @@
             alert("receivedEvent error : " + err);
         }
     }
-
-      
-      
-function init(){
-        try {
-          console.log("PushNotification");  
-          console.log(PushNotification);
-          var push = PushNotification.init({ "android": {"senderID": "58889346741"}});
-          push.on('registration', function(data) {
-              console.log("registrando!!!!!!");
-              console.log(data.registrationId);
-          });
-          push.on('notification', function(data) {
-              console.log(data.title+" Message: " +data.message);
-          });
-          push.on('error', function(e) {
-              console.log("Error!!!!!");
-              console.log(e.message);
-          });
-        }catch(err) {
-            alert("receivedEvent error : " + err);
-        }
-}      
-      /*function init(){
-        try{
-          console.log("Ejecuto JS");
-          const push = PushNotification.init({
-            android: {
-            },
-              browser: {
-                  pushServiceURL: 'http://push.api.phonegap.com/v1/push'
-              },
-            ios: {
-              alert: "true",
-              badge: "true",
-              sound: "true"
-            },
-            windows: {}
-          });
-          console.log(push);
-        } catch(e){
-          console.log("Error");
-          console.log(e);          
-        }
-        push.on('registration', (data) => {
-          console.log("registration");
-          console.log(data);
-        });
-
-        push.on('notification', (data) => {
-          // data.message,
-          // data.title,
-          // data.count,
-          // data.sound,
-          // data.image,
-          // data.additionalData
-        });
-
-        push.on('error', (e) => {
-          console.log("error");
-          console.log(e);
-        });
-      }*/
+     
+    function init(){
+       var token = window.localStorage.getItem("deviceToken");
+       alert(token);
+    }      
   	</script>
   </head>
   <body style="overflow:hidden;background-image:url('splash.png');background-position: center center;background-repeat: no-repeat;background-size:100% auto;">
