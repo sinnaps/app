@@ -53,7 +53,9 @@
      
     function init(){
        var token = window.localStorage.getItem("deviceToken");
-       window.open('https://precloud.sinnaps.com/precloud/', '_self ', 'location=no');
+      
+       window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
+       //window.open('https://precloud.sinnaps.com/precloud/', '_self ', 'location=no');
        alert(token);
     }      
   	</script>
