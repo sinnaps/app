@@ -63,8 +63,9 @@ Sinnaps
   
 <plugin name="cordova-plugin-whitelist"/>
 <access origin="https://sinnaps.com" subdomains="true" />
+<access origin="https://precloud.sinnaps.com" subdomains="true" />
 <access origin="*" subdomains="true" />
 <allow-intent href="*"/>
-<allow-navigation href="*"/>
+<allow-navigation href="*"/>  
 
 </widget>
