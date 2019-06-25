@@ -31,47 +31,35 @@
             var push = PushNotification.init({ "android": {"senderID": "58889346741"}});
             
             push.on('registration', function(data) {
-                console.log("registrando!!!!!!");
-                console.log(data.registrationId);
-                window.localStorage.setItem("deviceToken", data.registrationId);
+                var deviceToken = data.registrationId;
               
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                   if (this.readyState == 4 && this.status == 200) {
-                    window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";
-                    $(location).attr('href','https://precloud.sinnaps.com/precloud/mobile/');
+                    window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";                    
                   }else{
-                    window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
-                    $(location).attr('href','https://precloud.sinnaps.com/precloud/login/auth');
+                    window.location.href = "https://precloud.sinnaps.com/precloud/login/auth?deviceToken="+deviceToken;                    
                   }
                 };
                 xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
                 xhttp.send();               
             });
             
-            push.on('notification', function(data) {            
+            /*push.on('notification', function(data) {            
               console.log(data.title+" Message: " +data.message);
             });
             
             push.on('error', function(e) {
                 console.log("Error!!!!!");
                 console.log(e.message);
-            });
+            });*/
         } catch(err) {
             alert("receivedEvent error : " + err);
         }
     }
      
-    function init(){
-       var token = window.localStorage.getItem("deviceToken");
-      
-       window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
-       //window.open('https://precloud.sinnaps.com/precloud/', '_self ', 'location=no');
-       alert(token);
-    }      
   	</script>
   </head>
   <body style="overflow:hidden;background-image:url('splash.png');background-position: center center;background-repeat: no-repeat;background-size:100% auto;">
-    <button onclick="init()">INIT</button>
   </body>
 </html>
