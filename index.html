@@ -41,6 +41,7 @@ var app = {
             push.on('registration', function(data) {
                 console.log("registrando!!!!!!");
                 console.log(data.registrationId);
+                alert("guay");
             });
             push.on('notification', function(data) {
                 console.log(data.title+" Message: " +data.message);
