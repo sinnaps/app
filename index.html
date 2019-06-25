@@ -45,6 +45,13 @@
                 xhttp.send();               
             });
             
+pushObject.on('notification').subscribe((notification: any) => {
+    window.location.href = "https://precloud.sinnaps.com/";
+    pushObject.finish()
+       .then(e => {})
+       .catch(e => { console.log("ERROR NOTIFICATION",e); })
+}).catch(e => { console.log("ERROR NOTIFICATION",e); })          
+          
             /*push.on('notification', function(data) {            
               console.log(data.title+" Message: " +data.message);
             });
