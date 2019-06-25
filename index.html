@@ -25,17 +25,9 @@
       xhttp.send(); 
 */
       
-      
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
         try {
             var push = PushNotification.init({ "android": {"senderID": "58889346741"}});
             push.on('registration', function(data) {
@@ -50,14 +42,11 @@ var app = {
                 console.log("Error!!!!!");
                 console.log(e.message);
             });
-        }catch(err) {
+        } catch(err) {
             alert("receivedEvent error : " + err);
         }
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
     }
-};
+
       
       
 function init(){
