@@ -2,8 +2,8 @@
   <head>
     <!--
       <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
-      <meta http-equiv="refresh" content="0;URL='https://precloud.sinnaps.com/precloud/login/auth'" />
-      <meta https-equiv="refresh" content="0;URL='https://precloud.sinnaps.com/precloud/login/auth'" />
+      <meta http-equiv="refresh" content="0;URL='https://www.sinnaps.com/cloud/login/auth'" />
+      <meta https-equiv="refresh" content="0;URL='https://www.sinnaps.com/cloud/login/auth'" />
     -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/push.js"></script>
@@ -13,14 +13,14 @@
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";
-  		    $(location).attr('href','https://precloud.sinnaps.com/precloud/mobile/');
+          window.location.href = "https://www.sinnaps.com/cloud/mobile/";
+  		    $(location).attr('href','https://www.sinnaps.com/cloud/mobile/');
         }else{
-          window.location.href = "https://precloud.sinnaps.com/precloud/login/auth";
-  		    $(location).attr('href','https://precloud.sinnaps.com/precloud/login/auth');
+          window.location.href = "https://www.sinnaps.com/cloud/login/auth";
+  		    $(location).attr('href','https://www.sinnaps.com/cloud/login/auth');
         }
       };
-      xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
+      xhttp.open("GET", "https://www.sinnaps.com/cloud/user/downloadUserImage?userId=100001", true);
       xhttp.send(); 
 */
       
@@ -36,17 +36,17 @@
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                   if (this.readyState == 4 && this.status == 200) {
-                    window.location.href = "https://precloud.sinnaps.com/precloud/mobile/";                    
+                    window.location.href = "https://www.sinnaps.com/cloud/mobile/";                    
                   }else{
-                    window.location.href = "https://precloud.sinnaps.com/precloud/login/auth?deviceToken="+deviceToken;                    
+                    window.location.href = "https://www.sinnaps.com/cloud/login/auth?deviceToken="+deviceToken;                    
                   }
                 };
-                xhttp.open("GET", "https://precloud.sinnaps.com/precloud/user/downloadUserImage?userId=100001", true);
+                xhttp.open("GET", "https://www.sinnaps.com/cloud/user/downloadUserImage?userId=100001", true);
                 xhttp.send();               
             });
             
 /*push.on('notification').subscribe((notification: any) => {
-    window.location.href = "https://precloud.sinnaps.com/";
+    window.location.href = "https://www.sinnaps.com/";
     pushObject.finish()
        .then(e => {})
        .catch(e => { console.log("ERROR NOTIFICATION",e); })
@@ -54,7 +54,7 @@
           
             push.on('notification', function(data) {            
               console.log(data.title+" Message: " +data.message);
-              window.location.href = "https://precloud.sinnaps.com/";
+              window.location.href = "https://www.sinnaps.com/";
             });
             
             /*push.on('error', function(e) {
