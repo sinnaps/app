@@ -48,20 +48,17 @@ Sinnaps
 <icon height="120" platform="ios" src="icon_120.png" width="120" />
 <icon height="144" platform="ios" src="icon_144.png" width="144" />
 <icon height="152" platform="ios" src="icon_152.png" width="152" />
-
-<icon height="180" platform="ios" src="img/icon-60@3x.png" width="180" />
-<icon height="60" platform="ios" src="img/icon-60.png" width="60" />
-<icon height="120" platform="ios" src="img/icon-60@2x.png" width="120" />
-<icon height="76" platform="ios" src="img/icon-76.png" width="76" />
-<icon height="167" platform="ios" src="img/icon-83.5@2x.png" width="167" />
-<icon height="29" platform="ios" src="img/icon-small.png" width="29" />
-<icon height="58" platform="ios" src="img/icon-small@2x.png" width="58" />
-<icon height="87" platform="ios" src="img/icon-small@3x.png" width="87" />
-<icon height="40" platform="ios" src="img/icon-40.png" width="40" />
-<icon height="80" platform="ios" src="img/icon-40@2x.png" width="80" />
-<icon height="120" platform="ios" src="img/icon-40@3x.png" width="120" />
-<icon height="50" platform="ios" src="img/icon-50.png" width="50" />
-<icon height="100" platform="ios" src="img/icon-50@2x.png" width="100" />
+<icon height="180" platform="ios" src="icon_180.png" width="180" />
+<icon height="60" platform="ios" src="icon_60.png" width="60" />
+<icon height="76" platform="ios" src="icon_76.png" width="76" />
+<icon height="167" platform="ios" src="icon_167.png" width="167" />
+<icon height="29" platform="ios" src="icon_29.png" width="29" />
+<icon height="58" platform="ios" src="icon_58.png" width="58" />
+<icon height="87" platform="ios" src="icon_87.png" width="87" />
+<icon height="40" platform="ios" src="icon_40.png" width="40" />
+<icon height="80" platform="ios" src="icon_80.png" width="80" />
+<icon height="50" platform="ios" src="icon_50.png" width="50" />
+<icon height="100" platform="ios" src="icon_100.png" width="100" />
 
 <gap:splash src="splash_640x920.png" gap:platform="ios" width="640" height="920" />
 <gap:splash src="splash_640x1096.png" gap:platform="ios" width="640" height="1096" />
@@ -81,6 +78,7 @@ Sinnaps
 </array>
 </gap:config-file>
   
+<!--  
 <config-file platform="ios" target="*-Info.plist" parent="CFBundleLocalizations">
   <array>
     <string>fr</string>
@@ -91,7 +89,8 @@ Sinnaps
     <string>en</string>
   </array>
 </config-file>
-
+-->
+  
 <plugin name="phonegap-plugin-push" spec="~1.10.5">
   <variable name="SENDER_ID" value="546011694242" />
 </plugin>
