@@ -59,6 +59,7 @@ Sinnaps
 <icon height="80" platform="ios" src="icon_80.png" width="80" />
 <icon height="50" platform="ios" src="icon_50.png" width="50" />
 <icon height="100" platform="ios" src="icon_100.png" width="100" />
+<icon height="1024" platform="ios" src="icon_1024.png" width="1024" />
 
 <gap:splash src="splash_640x920.png" gap:platform="ios" width="640" height="920" />
 <gap:splash src="splash_640x1096.png" gap:platform="ios" width="640" height="1096" />
